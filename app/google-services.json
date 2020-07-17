@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "654250852693",
+    "firebase_url": "https://uber-52e60.firebaseio.com",
+    "project_id": "uber-52e60",
+    "storage_bucket": "uber-52e60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654250852693:android:e7e285c8b93e25c7d32fdc",
+        "android_client_info": {
+          "package_name": "com.example.maqalidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654250852693-9536hoeuva87loaq0kpvmeeefpqtu32e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.maqalidapp",
+            "certificate_hash": "9d287b8b46c970948617ce01f5de35882c3b8bf0"
+          }
+        },
+        {
+          "client_id": "654250852693-o4070or21924eu65ddnn85mfh4rb4l8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOUoOQMpyAVhRAFdgDqzTwFEMSlJS3Xxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654250852693-o4070or21924eu65ddnn85mfh4rb4l8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

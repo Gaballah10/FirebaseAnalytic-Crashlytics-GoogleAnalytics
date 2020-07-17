@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Maqalid App</string>
+    <string name="ga_trackingId" translatable="false">UA-240041368-2</string>
+</resources>
