@@ -3,6 +3,7 @@ package com.example.maqalidapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -10,6 +11,7 @@ import android.webkit.WebViewClient;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+import com.google.android.gms.measurement.module.Analytics;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class HomeActivity extends AppCompatActivity {
@@ -17,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     WebView wb;
     GoogleAnalytics analytics;
     Tracker tracker;
+    String id;
 
     private FirebaseAnalytics mFirebaseAnalytics;
 
@@ -34,6 +37,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        FirebaseAnalytics.getInstance(this).getAppInstanceId();
+
 
         wb = (WebView) findViewById(R.id.wv);
         wb.getSettings().setJavaScriptEnabled(true);
@@ -44,8 +49,25 @@ public class HomeActivity extends AppCompatActivity {
         wb.setWebViewClient(new HelloWebViewClient());
         wb.loadUrl("https://www.maqalid.com/home");
 
-        // doTracking();
+        onWebviewClicked();
+         doTracking();
 
+
+    }
+
+    private void onWebviewClicked() {
+
+        wb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Bundle params = new Bundle();
+                params.putString("id", id);
+                mFirebaseAnalytics.logEvent("share_id", params);
+
+
+            }
+        });
 
     }
 
